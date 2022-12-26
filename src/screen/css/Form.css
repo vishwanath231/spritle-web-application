@@ -1,0 +1,100 @@
+.form__container{
+    width: 100%;
+    padding: 15px;
+}
+
+
+.form__box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form h2 {
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.login__logo img,
+.register__logo img {
+    width: 100px;
+    height: 70px;
+}
+
+.form {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.form__field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form__field label {
+    margin-bottom: .6rem;
+}
+
+.form__field span{
+    color: red;
+}
+
+.form__field input {
+    border: 1.5px solid #dbdbdb;
+    outline: cornflowerblue;
+    padding: 1rem .6rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.form__field input:focus{
+    border: 1.5px solid #000;
+}
+
+.form button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.form__link{
+    margin-top: 1.5rem;
+}
+
+@media(min-width:768px){
+    .form__container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+}
+.form__home{
+    max-width: 1140px;
+    margin: 2rem auto 0 auto;
+    padding: 15px;
+
+}
+
+.returnHome__btn {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    padding: .7rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}

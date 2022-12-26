@@ -1,0 +1,83 @@
+.profile__container{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 15px 15px 15px;
+}
+
+.profile__about{
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 2rem 0 5rem 0;
+    text-align: center;
+}
+
+.profile__box{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.profile__img{
+    text-align: center;
+}
+
+.profile__img {
+    margin-bottom: 2rem;
+}
+
+.profile__img img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.profile__content h2{
+    font-size: 2rem;
+}
+
+.profile__content h4 {
+    margin-bottom: 1rem;
+}
+
+.profile__content p {
+    line-height: 23px;
+}
+
+.profile__social{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.profile__social .icon {
+    font-size: 30px;
+    color: #000;
+    margin-right: 10px;
+}
+
+@media(min-width:920px){
+    .profile__box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile__img {
+        margin-bottom: 0;
+    }
+}
+
+.skills span{
+    font-size: 1.2rem;
+    margin-bottom: .6rem;
+}
+
+.skills__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.skills__list .skill{
+    background: lightgray;
+    margin: .3rem;
+    padding: 1rem;
+    border-radius: 25px;
+    font-size: 14px;
+}
