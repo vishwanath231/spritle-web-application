@@ -1,0 +1,19 @@
+.message__box{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 1.5rem 0 0 0;
+}
+
+.success{
+    background: #5cb85c;
+}
+
+.error{
+    background: #d9534f;
+}
+
+.message{
+    text-align: center;
+    color: #292b2c;
+}
