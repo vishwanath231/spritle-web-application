@@ -14,7 +14,7 @@ const ProfileScreen = () => {
         if (!profile?.username) {
             navigate('/')
         }
-    }, [profile])
+    }, [profile, navigate])
     
 
     return (

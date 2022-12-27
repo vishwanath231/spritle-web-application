@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LOGO from '../assets/img/logo.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -10,8 +10,6 @@ const Navbar = () => {
 
     const handleClick = () => setClick(!click);
 
-
-    const navigate = useNavigate()
 
     const handelScroll = () => {
 
