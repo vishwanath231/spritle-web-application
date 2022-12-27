@@ -1,0 +1,45 @@
+.profile__placeholder{
+    text-align: center;
+}
+
+.profile__placeholder img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile__err{
+    margin: 1rem 0;
+    color: crimson;
+}
+
+.prev__btn,
+.next__btn{
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev__btn{
+    background: lightgrey;
+    color: #000;
+}
+
+.next__btn {
+    background: #000;
+    color: #fff;
+}
+
+.progress__bar{
+    text-align: right;
+}
+
+.progress__bar span {
+    color: green;
+}
