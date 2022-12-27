@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import LOGO from '../assets/img/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -9,6 +9,9 @@ const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
 
     const handleClick = () => setClick(!click);
+
+
+    const navigate = useNavigate()
 
     const handelScroll = () => {
 
@@ -27,6 +30,16 @@ const Navbar = () => {
         window.addEventListener('scroll', handelScroll);
     }, [])
 
+    const user =JSON.parse(localStorage.getItem('active'));
+    const profile = JSON.parse(localStorage.getItem(`profile_${user}`));
+
+
+    const logoutHandler = () => {
+        localStorage.removeItem('active')
+        window.location.href='/'
+        window.location.reload(false);
+        
+    }
 
 
     return (
@@ -34,14 +47,17 @@ const Navbar = () => {
             <NavContainer>
                 <nav className={scrolled ? "nav scroll" : "nav"}>
                     <div className="navbar">
-                        <Logo>
-                            <img src={LOGO} alt="logo" />
-                        </Logo>
+                        <Link to='/'>
+                            <Logo>
+                                <img src={LOGO} alt="logo" />
+                            </Logo>
+                        </Link>
                         <ul className={click ? "nav__menu active" : "nav__menu"}>
-                            <li><Link to="/">Landing Page</Link></li>
-                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/">Landing</Link></li>
+                            {user ? <li><Link to="/home">Home</Link></li> : null}
                             <li><Link to="/about">About</Link></li>
-                            <li><Link to="/Login" className='login__btn'>Login</Link></li>
+                            {profile ? <li><Link to="/profile">Profile</Link></li> : null}
+                            {user ? <li><button onClick={logoutHandler} className='login__btn'>Logout</button></li> : <li><Link to="/Login" className='login__btn'>Login</Link></li>}
                         </ul>
                         <MenuBar onClick={handleClick}>
                             <div className={click ? "hamburger open" : "hamburger"}>
@@ -57,10 +73,11 @@ const Navbar = () => {
             <Mobile onClick={handleClick}>
                 <div className={click ? "mobile__menu-list active" : "mobile__menu-list"}>
                     <ul>
-                        <li><Link to="/">Landing Page</Link></li>
-                        <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/">Landing</Link></li>
+                        {user ? <li><Link to="/home" className='login__btn'>Home</Link></li> : null}
                         <li><Link to="/about">About</Link></li>
-                        <li><Link to="/Login" className='mobileLogin__btn'>Login</Link></li>
+                        {profile ? <li><Link to="/profile">Profile</Link></li> : null}
+                        {user ? <li><button onClick={logoutHandler} className='mobileLogin__btn'>Logout</button></li> : <li><Link to="/Login" className='mobileLogin__btn'>Login</Link></li>}
                     </ul>
                 </div>
             </Mobile>
@@ -115,6 +132,7 @@ const NavContainer = styled.div`
 
     .nav__menu {
         display: flex;
+        align-items: center;
 
         li{
             list-style: none;
@@ -125,6 +143,9 @@ const NavContainer = styled.div`
                 color: #fff;
                 padding: .7rem 1rem;
                 border-radius: 5px;
+                border: none;
+                outline: none;
+                cursor: pointer;
 
                 &:hover{
                     color: #fff;
@@ -262,6 +283,8 @@ const Mobile = styled.div`
             padding: .7rem 1rem;
             width:100%;
             border-radius:5px;
+            border: none;
+            cursor: pointer;
 
             &:hover{
                 background: lightgray;
