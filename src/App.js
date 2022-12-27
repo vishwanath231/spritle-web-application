@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AboutScreen from './screen/AboutScreen';
 import HomeScreen from './screen/HomeScreen';
@@ -11,7 +11,7 @@ import ProfileScreen from './screen/ProfileScreen';
 
 const App = () => {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path='/' element={<LandingScreen /> } />
                 <Route path='/about' element={<AboutScreen /> } />
@@ -21,8 +21,7 @@ const App = () => {
                 <Route path='/user' element={<ProfileFormScreen /> } />
                 <Route path='/home' element={<HomeScreen /> } />
             </Routes>
-        
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
