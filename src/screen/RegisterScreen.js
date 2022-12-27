@@ -91,7 +91,7 @@ const RegisterScreen = () => {
 
                 // navigate('/')
 
-                setMsg('check your mail box, confirm your account! and create your profile')
+                setMsg('Check your mail box, confirm your account! and create your profile')
             }
         }
     }
