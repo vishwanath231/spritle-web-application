@@ -68,11 +68,14 @@ const RegisterScreen = () => {
             }
 
             if (localStorage.getItem(`user_${data.email}`)) {
+                
                 setError('User already exists!')
                 setData({
                     email: '',
                 })
+
             } else {
+                
                 emailjs.sendForm('service_khfy6sf', 'template_3sh14rt', form.current, 'L24WbnUQVplLj1NEs')
                 .then((result) => {
                     console.log(result.text);
@@ -89,7 +92,6 @@ const RegisterScreen = () => {
                 // navigate('/')
 
                 setMsg('check your mail box, confirm your account! and create your profile')
-
             }
         }
     }
