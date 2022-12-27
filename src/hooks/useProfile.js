@@ -79,7 +79,7 @@ const useProfile = () => {
         } else {
 
             setStep(step + 1)
-            setProgress(progress + 30)
+            setProgress(progress + 50)
         }
 
         setErrors(error)
@@ -109,7 +109,7 @@ const useProfile = () => {
             error.phone_no = "Please enter valid mobile number!"
         } else {
             setStep(step + 1)
-            setProgress(progress + 30)
+            setProgress(progress + 50)
         }
 
         setErrors(error);
@@ -133,7 +133,7 @@ const useProfile = () => {
             error.pincode = "Please enter valid pincode!"
         } else {
             setStep(step + 1)
-            setProgress(progress + 40)
+            setProgress(progress)
         }
 
         setErrors(error);
@@ -186,7 +186,7 @@ const useProfile = () => {
 
     const prevStep = () => {
         setStep(step - 1)
-        setProgress(progress - 30)
+        setProgress(progress - 50)
     }
 
 
