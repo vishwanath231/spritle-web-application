@@ -7,8 +7,9 @@
 .profile__about{
     font-size: 2rem;
     font-weight: 800;
-    margin: 2rem 0 5rem 0;
+    margin: 2rem 0 3rem 0;
     text-align: center;
+    color: #1d3557;
 }
 
 .profile__box{
