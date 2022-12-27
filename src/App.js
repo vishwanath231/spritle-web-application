@@ -6,6 +6,8 @@ import Register from './screen/Register';
 import Home from './screen/Home';
 import './App.css';
 import About from './screen/About';
+import ProfileForm from './screen/ProfileForm';
+import ProfileScreen from './screen/ProfileScreen';
 
 const App = () => {
     return (
@@ -15,6 +17,8 @@ const App = () => {
                 <Route path='/about' element={<About /> } />
                 <Route path='/login' element={<Login /> } />
                 <Route path='/register' element={<Register /> } />
+                <Route path='/profile' element={<ProfileScreen /> } />
+                <Route path='/user' element={<ProfileForm /> } />
                 <Route path='/home' element={<Home /> } />
             </Routes>
         
